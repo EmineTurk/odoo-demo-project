@@ -1,0 +1,4 @@
+id,name,model_id:id,group_id:id,perm_read,perm_write,perm_create,perm_unlink
+access_talep_plan,talep.plan,model_talep_plan,base.group_user,1,1,1,1
+access_talep_fiili,talep.fiili,model_talep_fiili,base.group_user,1,1,1,1
+access_talep_tahmin,talep.tahmin,model_talep_tahmin,base.group_user,1,1,1,1
