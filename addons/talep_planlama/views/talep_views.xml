@@ -1,0 +1,238 @@
+<odoo>
+    <!-- Tahmin Tree -->
+    <record id="view_tahmin_tree" model="ir.ui.view">
+        <field name="name">talep.tahmin.tree</field>
+        <field name="model">talep.tahmin</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="surec_id"/>
+                <field name="urun"/>
+                <field name="kanal"/>
+                <field name="olusturan"/>
+                <field name="olusturma_tarihi"/>
+                <field name="olusturma_saati"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Tahmin Form -->
+    <record id="view_tahmin_form" model="ir.ui.view">
+        <field name="name">talep.tahmin.form</field>
+        <field name="model">talep.tahmin</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="surec_id" readonly="1"/>
+                        <field name="urun"/>
+                        <field name="kanal"/>
+                        <field name="olusturan" readonly="1"/>
+                        <field name="olusturma_tarihi" readonly="1"/>
+                        <field name="olusturma_saati" readonly="1"/>
+                    </group>
+                    <notebook>
+                        <page string="Tahmin Miktarları">
+                            <group>
+                                <field name="ocak"/>
+                                <field name="subat"/>
+                                <field name="mart"/>
+                                <field name="nisan"/>
+                                <field name="mayis"/>
+                                <field name="haziran"/>
+                                <field name="temmuz"/>
+                                <field name="agustos"/>
+                                <field name="eylul"/>
+                                <field name="ekim"/>
+                                <field name="aralik"/>
+                            </group>
+                        </page>
+                        <page string="Onay Miktarları">
+                            <group>
+                                <field name="onay_ocak"/>
+                                <field name="onay_subat"/>
+                                <field name="onay_mart"/>
+                                <field name="onay_nisan"/>
+                                <field name="onay_mayis"/>
+                                <field name="onay_haziran"/>
+                                <field name="onay_temmuz"/>
+                                <field name="onay_agustos"/>
+                                <field name="onay_eylul"/>
+                                <field name="onay_ekim"/>
+                                <field name="onay_aralik"/>
+                            </group>
+                        </page>
+                    </notebook>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Fiili Tree -->
+    <record id="view_fiili_tree" model="ir.ui.view">
+        <field name="name">talep.fiili.tree</field>
+        <field name="model">talep.fiili</field>
+        <field name="arch" type="xml">
+            <tree>
+                <field name="surec_id"/>
+                <field name="urun"/>
+                <field name="kanal"/>
+                <field name="olusturan"/>
+                <field name="olusturma_tarihi"/>
+                <field name="olusturma_saati"/>
+            </tree>
+        </field>
+    </record>
+
+    <!-- Fiili Form -->
+    <record id="view_fiili_form" model="ir.ui.view">
+        <field name="name">talep.fiili.form</field>
+        <field name="model">talep.fiili</field>
+        <field name="arch" type="xml">
+            <form>
+                <sheet>
+                    <group>
+                        <field name="surec_id" readonly="1"/>
+                        <field name="urun"/>
+                        <field name="kanal"/>
+                        <field name="olusturan" readonly="1"/>
+                        <field name="olusturma_tarihi" readonly="1"/>
+                        <field name="olusturma_saati" readonly="1"/>
+                    </group>
+                    <group string="Fiili Miktarlar">
+                        <field name="ocak"/>
+                        <field name="subat"/>
+                        <field name="mart"/>
+                        <field name="nisan"/>
+                        <field name="mayis"/>
+                        <field name="haziran"/>
+                        <field name="temmuz"/>
+                        <field name="agustos"/>
+                        <field name="eylul"/>
+                        <field name="ekim"/>
+                        <field name="aralik"/>
+                    </group>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Genel Bakış Form -->
+    <record id="view_genel_bakis_form" model="ir.ui.view">
+        <field name="name">talep.tahmin.genel.form</field>
+        <field name="model">talep.tahmin</field>
+        <field name="arch" type="xml">
+            <form>
+                <header>
+                    <button name="action_onayla" string="Onayla" type="object" class="btn-primary"/>
+                </header>
+                <sheet>
+                    <group>
+                        <group>
+                            <field name="surec_id" readonly="1"/>
+                            <field name="urun" readonly="1"/>
+                            <field name="kanal" readonly="1"/>
+                        </group>
+                        <group>
+                            <field name="olusturan" readonly="1"/>
+                            <field name="olusturma_tarihi" readonly="1"/>
+                            <field name="olusturma_saati" readonly="1"/>
+                        </group>
+                    </group>
+                    <div style="overflow-x:auto; margin-top:16px;">
+                        <table style="width:100%; border-collapse:collapse; text-align:center;">
+                            <thead>
+                                <tr style="background:#f5f5f5;">
+                                    <th style="border:1px solid #ccc; padding:6px; text-align:left;"></th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Ocak</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Şubat</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Mart</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Nisan</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Mayıs</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Haziran</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Temmuz</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Ağustos</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Eylül</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Ekim</th>
+                                    <th style="border:1px solid #ccc; padding:6px;">Aralık</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="border:1px solid #ccc; padding:6px; text-align:left; font-weight:bold;">Talep Tahmini</td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="ocak" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="subat" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="mart" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="nisan" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="mayis" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="haziran" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="temmuz" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="agustos" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="eylul" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="ekim" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="aralik" readonly="1" nolabel="1"/></td>
+                                </tr>
+                                <tr>
+                                    <td style="border:1px solid #ccc; padding:6px; text-align:left; font-weight:bold;">Fiili Miktar</td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_ocak" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_subat" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_mart" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_nisan" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_mayis" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_haziran" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_temmuz" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_agustos" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_eylul" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_ekim" readonly="1" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="fiili_aralik" readonly="1" nolabel="1"/></td>
+                                </tr>
+                                <tr style="background:#ffffa0;">
+                                    <td style="border:1px solid #ccc; padding:6px; text-align:left; font-weight:bold;">Onay Miktar</td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_ocak" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_subat" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_mart" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_nisan" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_mayis" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_haziran" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_temmuz" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_agustos" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_eylul" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_ekim" nolabel="1"/></td>
+                                    <td style="border:1px solid #ccc; padding:4px;"><field name="onay_aralik" nolabel="1"/></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </sheet>
+            </form>
+        </field>
+    </record>
+
+    <!-- Actions -->
+    <record id="action_genel_bakis" model="ir.actions.act_window">
+        <field name="name">Genel Bakış</field>
+        <field name="res_model">talep.tahmin</field>
+        <field name="view_mode">tree,form</field>
+        <field name="view_ids" eval="[(5, 0, 0),
+            (0, 0, {'view_mode': 'tree', 'view_id': ref('view_tahmin_tree')}),
+            (0, 0, {'view_mode': 'form', 'view_id': ref('view_genel_bakis_form')})]"/>
+    </record>
+
+    <record id="action_tahmin" model="ir.actions.act_window">
+        <field name="name">Baz Tahmin Yükle</field>
+        <field name="res_model">talep.tahmin</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <record id="action_fiili" model="ir.actions.act_window">
+        <field name="name">Fiili Tahmin Yükle</field>
+        <field name="res_model">talep.fiili</field>
+        <field name="view_mode">tree,form</field>
+    </record>
+
+    <!-- Menüler -->
+    <menuitem id="menu_talep_root" name="Talep Planlama" sequence="1"/>
+    <menuitem id="menu_genel_bakis" name="Genel Bakış" parent="menu_talep_root" action="action_genel_bakis" sequence="1"/>
+    <menuitem id="menu_baz_tahmin" name="Baz Tahmin Yükle" parent="menu_talep_root" action="action_tahmin" sequence="2"/>
+    <menuitem id="menu_standart_maliyet" name="Standart Maliyet Yükle" parent="menu_talep_root" sequence="3"/>
+    <menuitem id="menu_fiili_tahmin" name="Fiili Tahmin Yükle" parent="menu_talep_root" action="action_fiili" sequence="4"/>
+</odoo>
