@@ -15,7 +15,7 @@
         </field>
     </record>
 
-    <!-- Tahmin Form -->
+    <!-- Tahmin Form  -->
     <record id="view_tahmin_form" model="ir.ui.view">
         <field name="name">talep.tahmin.form</field>
         <field name="model">talep.tahmin</field>
